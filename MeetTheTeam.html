@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet the team</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        margin: 50px 50px;
+        border: 2px solid gray;
+        padding: 10px 20px;
+      }
+      .container h1 {
+        font-weight: bold;
+        margin: auto;
+      }
+      .container hr {
+        margin: 5px 0;
+        background-color: black;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* flex: 50%; */
+      }
+
+      .card {
+        width: 250px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 12px gray;
+        margin: 4px 6px;
+        /* flex-grow: 1; */
+      }
+
+      @media (max-width:680px) {
+        .card{
+            width: auto;
+            margin-top: 10px;
+            font-size: 10px;
+        }
+      }
+
+      @media (max-width:400px) {
+        .container{
+            margin: 0;
+        }
+        .card{
+            width: auto;
+            margin-top: 10px;
+            font-size: 10px;
+        }
+      }
+      .card img {
+        width: 100%;
+      }
+
+      .content{
+        padding: 10px 20px;
+      }
+      .card h3 {
+        padding: 10px 0;
+        font-weight: 100;
+        font-size:30px;
+      }
+      .card h4 {
+        padding: 10px 0;
+        font-weight: 100;
+        font-size:20px;
+        color: gray;
+      }
+      .card p{
+        padding: 10px 0;
+        font-weight: 500;
+        font-size:20px;
+      }
+
+      .card button{
+        width: 100%;
+        border: none;
+        padding: 10px 0;
+        color: white;
+        background-color: gray;
+        font-size: 25px;
+        font-weight: bold;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Meet the Team</h1>
+      <hr />
+      <div class="cards">
+
+        <div class="card">
+          <img src="images/p1.jpg" alt="" />
+          <div class="content">
+            <h3>Jane doe</h3>
+
+            <h4>CEO & Founder</h4>
+
+            <p>Phasellus eget enim eu lectus faucibus vestibulum</p>
+
+            <p>example@example.com</p>
+
+            <button>contact</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/p2.jpg" alt="" />
+          <div class="content">
+            <h3>Jane doe</h3>
+
+            <h4>CEO & Founder</h4>
+
+            <p>Phasellus eget enim eu lectus faucibus vestibulum</p>
+
+            <p>example@example.com</p>
+
+            <button>contact</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/p3.jpg" alt="" />
+          <div class="content">
+            <h3>Jane doe</h3>
+
+            <h4>CEO & Founder</h4>
+
+            <p>Phasellus eget enim eu lectus faucibus vestibulum</p>
+
+            <p>example@example.com</p>
+
+            <button>contact</button>
+          </div>
+          
+        </div>
+        <div class="card">
+            <img src="images/p2.jpg" alt="" />
+            <div class="content">
+              <h3>Jane doe</h3>
+  
+              <h4>CEO & Founder</h4>
+  
+              <p>Phasellus eget enim eu lectus faucibus vestibulum</p>
+  
+              <p>example@example.com</p>
+  
+              <button>contact</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/p2.jpg" alt="" />
+            <div class="content">
+              <h3>Jane doe</h3>
+  
+              <h4>CEO & Founder</h4>
+  
+              <p>Phasellus eget enim eu lectus faucibus vestibulum</p>
+  
+              <p>example@example.com</p>
+  
+              <button>contact</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 60px;
+        margin: 5px;
+      }
+
+      .image__slider {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      .sliders {
+        display: none;
+      }
+
+      .prev,
+      .next {
+        font-size: 40px;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        margin-top: -20px;
+        color: white;
+        transition: 0.1s ease-in;
+        font-weight: bold;
+        padding: 8px;
+      }
+      .next {
+        right: 0;
+      }
+      .prev:hover,
+      .next:hover {
+        background-color: gray;
+      }
+      .sliders img{
+        width: 100%;
+      }
+
+      .sliders h3 {
+        position: absolute;
+        font-size: 30px;
+        bottom: 0;
+        left: 45%;
+        color: white;
+      }
+      .active {
+        display: block;
+      }
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>welcome to image slider</h1>
+
+    <div class="image__slider">
+      <div class="sliders fade active">
+        <img src="images/3.jpg" />
+        <h3>sliders</h3>
+      </div>
+
+      <div class="sliders fade">
+        <img src="images/16.jpg "  />
+        <h3>sliders</h3>
+      </div>
+
+      <div class="sliders fade">
+        <img src="images/18.jpg"  />
+        <h3>sliders</h3>
+      </div>
+      <div class="sliders fade">
+        <img src="images/15.jpg" />
+        <h3>sliders</h3>
+      </div>
+
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </div>
+
+    <script>
+      let slides = document.getElementsByClassName("sliders");
+      let currindex = 0;
+      for (let i = 0; i < slides.length; i++) {
+        if (slides[i].classList.contains("active")) {
+          currindex = i;
+          break;
+        }
+      }
+      let prev = document.getElementsByClassName("prev")[0];
+      let next = document.getElementsByClassName("next")[0];
+
+      next.addEventListener("click", () => {
+        slides[currindex].classList.remove("active");
+        currindex++;
+        if (currindex == slides.length) currindex = 0;
+        slides[currindex].className += " active";
+      });
+
+      prev.addEventListener("click", () => {
+        slides[currindex].classList.remove("active");
+        currindex--;
+        if (currindex < 0) currindex = slides.length - 1;
+        slides[currindex].className += " active";
+      });
+    </script>
+  </body>
+</html>
